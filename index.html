@@ -4,11 +4,38 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Testing Ground</title>
-      <!--<script src="http://code.jquery.com/jquery-2.1.4.min.js"/>-->
-      <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"/>
+      <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script>
       <!--first module: When to Use jQuery?  An alternative with nearly identical API was suggested for faster load: zepto.js, included above.  Working with actual code hsn't started yet...-->
+      <style>
+         p{
+            text-indent:1em;
+            /*paragraph first line indentation*/
+         }
+      </style>
    </head>
    <body>
-   
+      <h1>Sample Snippet</h1>
+      <div id="snippet">
+         <p>
+            <em>"Virus</em> zombies? <em>Psssht.</em> I'd rather a necromantic horde any day. You sure these buggers aren't just a new kind o' undead? Not sommun's bollixed-up pet project?" The grizzled Messenger eyed the translucent image of his trainee replacement; all of these newfangled methods did nothing to build character.
+         </p>
+         <p>
+            "Uh–no, sir. Word from the Deadspeakers is that there's just enough of something alive in 'em to be out of their purview, sir." 
+         </p>
+         <p>
+            --Or the nerves, the Messenger snorted.
+         </p>
+         <p>
+            "An' ye're sure them magicky hoodoo whatsists 're tellin' th'  truth this time?" The necromancers had lied before, when they'd needed to.
+         </p>
+         <div class="ridikkulus"></div>
+      </div>
+      <script>
+      var paras = document.querySelectorAll("p");
+console.log(paras);
+      </script>
+      <script src="script.js"></script>
+      <script src="jqfScript.js"></script>
    </body>
 </html>
