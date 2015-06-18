@@ -24,3 +24,17 @@ removalOne.empty();
 
 
 /* module 4: Native Events */
+
+/*really just did some simple things.  may revisit in a bit.*/
+
+//adding hover toggle for text color and a message elsewhere
+$sub.on("mouseover", function(){
+   $sub.css("color", "cyan");
+   $sub.css("cursor","pointer");
+   console.log("subheader hovered");
+   $("#otherstuff").html("subheader hovered at least once -JQ");
+});
+$sub.on("mouseleave", function(){
+   $sub.css("color", "gray");
+});
+

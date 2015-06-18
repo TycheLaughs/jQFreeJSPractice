@@ -30,3 +30,15 @@ removalTwo.parentNode.removeChild(removalTwo);
 
 
 /* module 4: Native Events */
+
+/*really just did some simple things.  may revisit in a bit.*/
+//adding hover toggle for text content
+
+paras[2].addEventListener("mouseover", function(){
+   paras[2].innerHTML="--Or the nerves, the Messenger snorted.-jQFree";
+   paras[2].style["cursor"]="pointer";
+   document.getElementById("moreStuff").innerHTML = "paragraph 3 hovered at least once -jQFree";
+});
+paras[2].addEventListener("mouseleave",function(){
+   paras[2].innerHTML="[Insert pithy phrase here -jQFree]";
+});
