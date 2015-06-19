@@ -39,6 +39,7 @@ $sub.on("mouseleave", function(){
 });
 
 /*module 5: Native AJAX */
+/*used GET to get some data from a JSON file*/
 $("#justClickIt").on("click", function(){
    //console.log('clicked');
    $.ajax({
@@ -52,3 +53,20 @@ $("#justClickIt").on("click", function(){
    });
 });
 
+/* module 6: Native Utilities*/
+
+var someData = [
+   {author: "Poe", topic:"human nature"},
+   {author: "Hemmingway", topic: "inadequacy"},
+   {author: "Gaiman", topic: "bending reality"},
+   {author: "Butcher", topic:"geekery"}
+];
+
+var insertion="<ul>";
+
+$.each(someData, function(index, entry){
+   insertion += "<li>" +entry.author + " writes about "+ entry.topic +"</li>";
+   console.log("added some data");
+});
+insertion += "<li>JQ</li></ul>";
+$("#authorsJQ").html(insertion);
