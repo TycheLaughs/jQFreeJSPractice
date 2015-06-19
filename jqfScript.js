@@ -81,7 +81,9 @@ console.log(JSON.stringify(result));
 secondSlot.innerHTML = result[0].author + " writes about " + result[0].topic + " -JQFree";
 
 /* module 7: Animations */
-
+/*.. pretty much most of all the ways of doing little animations 
+involves adding or toggling a class.  CSS3 animations are really 
+a different topic than JS, though they were used in the video*/
 paras[2].addEventListener("click", function(){
    paras[2].classList.toggle("darken");
 });

@@ -73,7 +73,7 @@ $("#authorsJQ").html(insertion);
 
 /* module 7: Animations */
 
-
+/*.. pretty much most of all the ways of doing little animations involves adding or toggling a class*/
 $sub.click(function(){
    
    $sub.slideToggle();
