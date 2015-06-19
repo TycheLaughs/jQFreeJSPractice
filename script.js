@@ -70,3 +70,13 @@ $.each(someData, function(index, entry){
 });
 insertion += "<li>JQ</li></ul>";
 $("#authorsJQ").html(insertion);
+
+/* module 7: Animations */
+
+
+$sub.click(function(){
+   
+   $sub.slideToggle();
+   
+});
+/*built-in jQuery animations aren't as customizable as I'd prefer... */

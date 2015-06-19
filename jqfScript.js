@@ -79,3 +79,9 @@ var result= someData.filter(function(entry){
 });
 console.log(JSON.stringify(result));
 secondSlot.innerHTML = result[0].author + " writes about " + result[0].topic + " -JQFree";
+
+/* module 7: Animations */
+
+paras[2].addEventListener("click", function(){
+   paras[2].classList.toggle("darken");
+});
