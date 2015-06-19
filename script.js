@@ -38,3 +38,17 @@ $sub.on("mouseleave", function(){
    $sub.css("color", "gray");
 });
 
+/*module 5: Native AJAX */
+$("#justClickIt").on("click", function(){
+   //console.log('clicked');
+   $.ajax({
+      type: "GET",
+      url:"someStuff.json",
+      success: function(data){
+         console.log(JSON.stringify(data.STUFF.used));
+         $("#evenMoreStuff").html("<p>"+JSON.stringify(data.STUFF.used)+"</p>"); 
+         $("#evenMoreStuff").css("background-color","green");
+      }
+   });
+});
+

@@ -42,3 +42,25 @@ paras[2].addEventListener("mouseover", function(){
 paras[2].addEventListener("mouseleave",function(){
    paras[2].innerHTML="[Insert pithy phrase here -jQFree]";
 });
+
+
+/*module 5: Native AJAX */
+
+/*tried using FormData object constructor as suggested in video, but I couldn't figure out how to make it work.  The actual objject just directly from teh form without using that constructor appears to work just fine, considering I'm not doing anything super special withteh data*/
+var captureclicker = document.getElementById("submitNoJQ");
+   captureclicker.addEventListener("click", function(){
+   var myForm = document.getElementById("myForm");
+   console.log(myForm[0].value);
+   console.log(JSON.stringify(myForm));
+   var xhr = new XMLHttpRequest();
+   
+   xhr.open("POST", "" , true);
+   xhr.onload = function(){  
+      document.getElementById("stillMoreStuff").innerHTML = "You selected: "+
+      myForm.elements.radNoJQ.value + " and entered: " + myForm.elements.textNoJQ.value;
+   };
+   xhr.send(myForm);
+   
+   /*wasn't sure of the point of the JSONP method, as the entire explanation felt kind of vague.  As far as I can tell, it's about the same as performing a synchronous GET whose data gets processed by a function... which you can do without using what looks to me like a convoluted method.*/
+
+});
