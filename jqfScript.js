@@ -106,7 +106,8 @@ canv.title="The 'power button' symbol was initially meant to represent a 'standb
 function listExists(){
 var authorsList = document.getElementById("authorsListJQ");
 authorsList.addEventListener("click", function(){
-   authorsList.forEach(rainbowfy());
+   //working on getting an array from DOM NodeList
+   //authorsList.forEach(rainbowfy());
 });
 }
 function rainbowfy(value, index, arr){
