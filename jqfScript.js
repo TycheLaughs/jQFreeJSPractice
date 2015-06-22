@@ -6,7 +6,9 @@ var paras = document.querySelectorAll("p");
 paras[2].innerHTML = "[Insert pithy phrase here -jQFree]";
 /*selected a group of elements and replaced one of them without really needing to use the array slice trick.  May need that later,  but not necessary to explore differences between jQuery and vanilla JS.*/
 
-/* module 3: Native DOM */
+paras[0].title = "This was one of my better and more enjoyable adventures into dialogue-heavy writing, and it was spawned out of the idea of 'what if one of these zombie apocalypses that are so popular happened in a world that already had necromancers as fully-acknowledged, working citizens?'";
+
+/* module 3: aNative DOM */
 var hUndG = document.createElement("p");
 /*way to add an element*/
 hUndG.innerText = "And now for something completely different -jQFree: Maggie startled badly enough that the mechanism controlling her chopping speed went into a frantic spin at her elbow joint, knife fairly vibrating in place, cutting nothing but air; she would have dropped it had she been holding it in her hand. She did drop the tuber. ";
@@ -90,8 +92,6 @@ paras[2].addEventListener("click", function(){
    paras[2].classList.toggle("darken");
 });
 
-
-
 /*some canvas stuff sort of for fun*/
 var canv = document.getElementById('canv');
 var context = canv.getContext('2d');
@@ -105,4 +105,5 @@ context.lineWidth = 9;
 context.arc(90,190, 70, (((3*Math.PI)/2)+.5),(((3*Math.PI)/2)));
 context.stroke();
 
-canv.title="The 'power button' symbol was initially meant to represent a 'standby' state, wherein the states of on and might have been ambiguous.  This resulted in the 1-superimposed-on-0 symbol, to represent power-high-or-low.  Later on, this symbol came to be used on power buttons in many consumer devices and its meaning has been mostly forgotten.";
+canv.title="The 'power button' symbol was initially meant to represent a 'standby' state, wherein the states of on and might have been ambiguous.  This resulted in the 1-superimposed-on-0 symbol, to represent power-high-or-low.  This symbol came to be used on power buttons in many consumer devices and its riginal meaning has been mostly forgotten.";
+
