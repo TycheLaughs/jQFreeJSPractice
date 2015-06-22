@@ -17,10 +17,14 @@ $sub.css("font-size","1.2em");
 
 /*remove elements*/
 var removalOne = $(".ridikkulus");
-removalOne.empty();
+removalOne.css("border", "1px solid black");
+removalOne.on("click", function(){
+   removalOne.empty();
+   removalOne.css("border", "none");
+});
 
 /*probably going to add forms and dealing with those elements when going through the AJAX module, module 5*/
-
+$pars.eq(3).attr("title", "This is from a completely different writing sample, based loosely off of Hansel und Gretel.  It was one of my first forays into writing comprised mostly of dialogue in an effort to cut down on the overly long bouts of introspection and/or exposition in much of my writing.");
 
 
 /* module 4: Native Events */

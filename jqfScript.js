@@ -21,7 +21,9 @@ hug.style["opacity"]=".8";
 
 /*remove elements*/
 var removalTwo = document.getElementById("boggart");
-removalTwo.parentNode.removeChild(removalTwo);
+removalTwo.addEventListener("click", function(){
+   removalTwo.parentNode.removeChild(removalTwo)
+});
 
 /*probably going to add forms and dealing with those elements when going through the AJAX module, module 5*/
 
@@ -87,3 +89,20 @@ a different topic than JS, though they were used in the video*/
 paras[2].addEventListener("click", function(){
    paras[2].classList.toggle("darken");
 });
+
+
+
+/*some canvas stuff sort of for fun*/
+var canv = document.getElementById('canv');
+var context = canv.getContext('2d');
+context.beginPath();
+context.lineWidth = 10;
+context.moveTo(92,180);
+context.lineTo(115,90);
+context.stroke();
+context.beginPath();
+context.lineWidth = 9;
+context.arc(90,190, 70, (((3*Math.PI)/2)+.5),(((3*Math.PI)/2)));
+context.stroke();
+
+canv.title="The 'power button' symbol was initially meant to represent a 'standby' state, wherein the states of on and might have been ambiguous.  This resulted in the 1-superimposed-on-0 symbol, to represent power-high-or-low.  Later on, this symbol came to be used on power buttons in many consumer devices and its meaning has been mostly forgotten.";
