@@ -24,7 +24,7 @@ removalOne.on("click", function(){
 });
 
 /*probably going to add forms and dealing with those elements when going through the AJAX module, module 5*/
-$pars.eq(3).attr("title", "This is from a completely different writing sample, based loosely off of 'Hansel und Gretel'.  It was one of my first forays into writing comprised mostly of dialogue in an effort to cut down on the overly long bouts of introspection and/or exposition in much of my writing.");
+$pars.eq(3).attr("title", "This pink text is from a completely different writing sample, based loosely off of 'Hansel und Gretel'.  It was one of my first forays into writing comprised mostly of dialogue in an effort to cut down on the overly long bouts of introspection and/or exposition in much of my writing.");
 
 
 /* module 4: Native Events */

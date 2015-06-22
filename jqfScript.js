@@ -42,11 +42,14 @@ paras[2].addEventListener("mouseover", function(){
    document.getElementById("moreStuff").innerHTML = "paragraph 3 hovered at least once -jQFree";
 });
 paras[2].addEventListener("mouseleave",function(){
-   paras[2].innerHTML="[Insert pithy phrase here -jQFree]";
+   paras[2].innerHTML="[Insert pithy phrase here -jQFree (click me)]";
 });
 
 
 /*module 5: Native AJAX */
+
+
+
 
 /*tried using FormData object constructor as suggested in video, but I couldn't figure out how to make it work.  The actual objject just directly from teh form without using that constructor appears to work just fine, considering I'm not doing anything super special withteh data*/
 var captureclicker = document.getElementById("submitNoJQ");
@@ -64,19 +67,13 @@ var captureclicker = document.getElementById("submitNoJQ");
    xhr.send(myForm);
    
    /*wasn't sure of the point of the JSONP method, as the entire explanation felt kind of vague.  As far as I can tell, it's about the same as performing a synchronous GET whose data gets processed by a function... which you can do without using what looks to me like a convoluted method.*/
-   
-   /* MSDN seems to have a more comprehensive (and comprehensible) explanation of FormData objects and how to use them here:
-   https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects
-   
-   and I'll be looking into this soonish*/
-
 });
 
 /* module 6: Native Utilities*/
 
 /*I've used JSON.stringify already in this course, so I'm not going to spend time repeating that one.  */
 
-/*someData is an array in script.js*/
+
 var secondSlot = document.getElementById("authorsNoJQ");
 var result= someData.filter(function(entry){
    return ~entry.author.indexOf("G");
@@ -105,5 +102,14 @@ context.lineWidth = 9;
 context.arc(90,190, 70, (((3*Math.PI)/2)+.5),(((3*Math.PI)/2)));
 context.stroke();
 
-canv.title="The 'power button' symbol was initially meant to represent a 'standby' state, wherein the states of on and might have been ambiguous.  This resulted in the 1-superimposed-on-0 symbol, to represent power-high-or-low.  This symbol came to be used on power buttons in many consumer devices and its riginal meaning has been mostly forgotten.";
-
+canv.title="The 'power button' symbol was initially meant to represent a 'standby' state, wherein the states of on and might have been ambiguous.  This resulted in the 1-superimposed-on-0 symbol, to represent power-high-or-low.  This symbol came to be used on power buttons in many consumer devices and its original meaning has been mostly forgotten.";
+function listExists(){
+var authorsList = document.getElementById("authorsListJQ");
+authorsList.addEventListener("click", function(){
+   authorsList.forEach(rainbowfy());
+});
+}
+function rainbowfy(value, index, arr){
+   var rainbow = ["red", "orange", "yellow", "green", "blue", "purple"];
+   value.style("color", rainbow[index]);
+}
