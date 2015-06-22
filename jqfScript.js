@@ -48,9 +48,6 @@ paras[2].addEventListener("mouseleave",function(){
 
 /*module 5: Native AJAX */
 
-
-
-
 /*tried using FormData object constructor as suggested in video, but I couldn't figure out how to make it work.  The actual objject just directly from teh form without using that constructor appears to work just fine, considering I'm not doing anything super special withteh data*/
 var captureclicker = document.getElementById("submitNoJQ");
    captureclicker.addEventListener("click", function(){
@@ -73,7 +70,7 @@ var captureclicker = document.getElementById("submitNoJQ");
 
 /*I've used JSON.stringify already in this course, so I'm not going to spend time repeating that one.  */
 
-
+/*someData is an array in script.js*/
 var secondSlot = document.getElementById("authorsNoJQ");
 var result= someData.filter(function(entry){
    return ~entry.author.indexOf("G");
@@ -103,14 +100,3 @@ context.arc(90,190, 70, (((3*Math.PI)/2)+.5),(((3*Math.PI)/2)));
 context.stroke();
 
 canv.title="The 'power button' symbol was initially meant to represent a 'standby' state, wherein the states of on and might have been ambiguous.  This resulted in the 1-superimposed-on-0 symbol, to represent power-high-or-low.  This symbol came to be used on power buttons in many consumer devices and its original meaning has been mostly forgotten.";
-function listExists(){
-var authorsList = document.getElementById("authorsListJQ");
-authorsList.addEventListener("click", function(){
-   //working on getting an array from DOM NodeList
-   //authorsList.forEach(rainbowfy());
-});
-}
-function rainbowfy(value, index, arr){
-   var rainbow = ["red", "orange", "yellow", "green", "blue", "purple"];
-   value.style("color", rainbow[index]);
-}

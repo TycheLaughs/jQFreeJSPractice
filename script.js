@@ -74,7 +74,8 @@ $.each(someData, function(index, entry){
 });
 insertion += "<li>JQ</li></ul>";
 $("#authorsJQ").html(insertion);
-listExiss
+
+
 /* module 7: Animations */
 
 /*.. pretty much most of all the ways of doing little animations involves adding or toggling a class*/
