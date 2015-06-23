@@ -24,7 +24,7 @@ removalOne.on("click", function(){
 });
 
 /*probably going to add forms and dealing with those elements when going through the AJAX module, module 5*/
-$pars.eq(3).attr("title", "This pink text is from a completely different writing sample, based loosely off of 'Hansel und Gretel'.  It was one of my first forays into writing comprised mostly of dialogue in an effort to cut down on the overly long bouts of introspection and/or exposition in much of my writing.");
+$pars.eq(3).attr("title", "This pink text is from a completely different writing sample, based loosely off of 'Hansel und Gretel'.  It was one of my first forays into writing comprised mostly of dialogue in an effort to cut down on the overly long bouts of introspection and/or exposition in much of my writing. -jQ");
 
 
 /* module 4: Native Events */
@@ -35,8 +35,8 @@ $pars.eq(3).attr("title", "This pink text is from a completely different writing
 $sub.on("mouseover", function(){
    $sub.css("color", "cyan");
    $sub.css("cursor","pointer");
-   console.log("subheader hovered");
-   $("#otherstuff").html("subheader hovered at least once -JQ");
+   console.log("subheader hovered -jQ");
+   $("#otherstuff").html("subheader hovered at least once -jQ");
 });
 $sub.on("mouseleave", function(){
    $sub.css("color", "gray");
@@ -50,7 +50,7 @@ $("#justClickIt").on("click", function(){
       type: "GET",
       url:"someStuff.json",
       success: function(data){
-         console.log(JSON.stringify(data.STUFF.used));
+         //console.log(JSON.stringify(data.STUFF.used));
          $("#evenMoreStuff").html("<p>"+JSON.stringify(data.STUFF.used)+"</p>"); 
          $("#evenMoreStuff").css("background-color","green");
       }
@@ -72,7 +72,7 @@ $.each(someData, function(index, entry){
    insertion += "<li>" +entry.author + " writes about "+ entry.topic +"</li>";
    console.log("added some data");
 });
-insertion += "<li>JQ</li></ul>";
+insertion += "<li>-jQ</li></ul>";
 $("#authorsJQ").html(insertion);
 
 

@@ -6,12 +6,12 @@ var paras = document.querySelectorAll("p");
 paras[2].innerHTML = "[Insert pithy phrase here -jQFree]";
 /*selected a group of elements and replaced one of them without really needing to use the array slice trick.  May need that later,  but not necessary to explore differences between jQuery and vanilla JS.*/
 
-paras[0].title = "This was one of my better and more enjoyable adventures into dialogue-heavy writing, and it was spawned out of the idea of 'what if one of these zombie apocalypses that are so popular happened in a world that already had necromancers as fully-acknowledged, working citizens?'";
+paras[0].title = "This was one of my better and more enjoyable adventures into dialogue-heavy writing, and it was spawned out of the idea of 'what if one of these zombie apocalypses that are so popular happened in a world that already had necromancers as fully-acknowledged, working citizens?'  -jQFree";
 
 /* module 3: aNative DOM */
 var hUndG = document.createElement("p");
 /*way to add an element*/
-hUndG.innerText = "And now for something completely different -jQFree: Maggie startled badly enough that the mechanism controlling her chopping speed went into a frantic spin at her elbow joint, knife fairly vibrating in place, cutting nothing but air; she would have dropped it had she been holding it in her hand. She did drop the tuber. ";
+hUndG.innerText = "And now for something completely different -jQFree: Maggie startled badly enough that the mechanism controlling her chopping speed went into a frantic spin at her elbow joint, knife fairly vibrating in place, cutting nothing but air; she would have dropped it had she been holding it in her hand. She did drop the tuber.  -jQFree";
 
 hUndG.id = "hug";
 paras[3].appendChild(hUndG);
@@ -29,20 +29,18 @@ removalTwo.addEventListener("click", function(){
 
 /*probably going to add forms and dealing with those elements when going through the AJAX module, module 5*/
 
-
-
 /* module 4: Native Events */
 
 /*really just did some simple things.  may revisit in a bit.*/
 //adding hover toggle for text content
 
 paras[2].addEventListener("mouseover", function(){
-   paras[2].innerHTML="--Or the nerves, the Messenger snorted.-jQFree";
-   paras[2].style["cursor"]="pointer";
+   paras[2].innerHTML="--Or the nerves, the Messenger snorted.  -jQFree";
+   paras[2].style["cursor"]= "pointer";
    document.getElementById("moreStuff").innerHTML = "paragraph 3 hovered at least once -jQFree";
 });
 paras[2].addEventListener("mouseleave",function(){
-   paras[2].innerHTML="[Insert pithy phrase here -jQFree (click me)]";
+   paras[2].innerHTML="[Insert pithy phrase here (click me)  -jQFree]";
 });
 
 
@@ -59,7 +57,7 @@ var captureclicker = document.getElementById("submitNoJQ");
    xhr.open("POST", "" , true);
    xhr.onload = function(){  
       document.getElementById("stillMoreStuff").innerHTML = "You selected: "+
-      myForm.elements.radNoJQ.value + " and entered: " + myForm.elements.textNoJQ.value;
+      myForm.elements.radNoJQ.value + " and entered: " + myForm.elements.textNoJQ.value +"  -jQFree";
    };
    xhr.send(myForm);
    
@@ -72,11 +70,11 @@ var captureclicker = document.getElementById("submitNoJQ");
 
 /*someData is an array in script.js*/
 var secondSlot = document.getElementById("authorsNoJQ");
-var result= someData.filter(function(entry){
+var result = someData.filter(function(entry){
    return ~entry.author.indexOf("G");
 });
-console.log(JSON.stringify(result));
-secondSlot.innerHTML = result[0].author + " writes about " + result[0].topic + " -JQFree";
+//console.log(JSON.stringify(result));
+secondSlot.innerHTML = result[0].author + " writes about " + result[0].topic + " -jQFree";
 
 /* module 7: Animations */
 /*.. pretty much most of all the ways of doing little animations 
@@ -99,4 +97,4 @@ context.lineWidth = 9;
 context.arc(90,190, 70, (((3*Math.PI)/2)+.5),(((3*Math.PI)/2)));
 context.stroke();
 
-canv.title="The 'power button' symbol was initially meant to represent a 'standby' state, wherein the states of on and might have been ambiguous.  This resulted in the 1-superimposed-on-0 symbol, to represent power-high-or-low.  This symbol came to be used on power buttons in many consumer devices and its original meaning has been mostly forgotten.";
+canv.title="The 'power button' symbol was initially meant to represent a 'standby' state, wherein the states of on and might have been ambiguous.  This resulted in the 1-superimposed-on-0 symbol, to represent power-high-or-low.  This symbol came to be used on power buttons in many consumer devices and its original meaning has been mostly forgotten.  -jQFree";
