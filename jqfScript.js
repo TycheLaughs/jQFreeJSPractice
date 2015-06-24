@@ -154,7 +154,7 @@ document.getElementById('valForm').addEventListener("submit", function(){
    if(firstSelected === "not selected" || secondSelected === "not selected" || thirdSelected === "not selected" || fourthSelected === "not selected" || fifthSelected === "not selected"){
        if(document.getElementById('message')!== null){
           document.getElementById('message').innerText = "Please select an option from each group";
-          message.style['color']= "red";
+          document.getElementById('message').style['color']= "red";
        }
        else{
          var message = document.createElement("span");
@@ -167,7 +167,7 @@ document.getElementById('valForm').addEventListener("submit", function(){
    else{
       if(document.getElementById('message')!== null){
          document.getElementById('message').innerText = "Correct number of options selected!";
-         message.style['color']= "green";
+         document.getElementById('message').style['color']= "green";
       }
       else{
          var message = document.createElement("span");
