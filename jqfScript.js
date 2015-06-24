@@ -151,33 +151,8 @@ document.getElementById('valForm').addEventListener("submit", function(){
    var fifthSelected =  checkForChecked(option5);
    
    console.log(firstSelected + ', ' + secondSelected +', ' + thirdSelected +', ' + fourthSelected +', ' + fifthSelected);
-   if(firstSelected === "not selected" || secondSelected === "not selected" || thirdSelected === "not selected" || fourthSelected === "not selected" || fifthSelected === "not selected"){
-       if(document.getElementById('message')!== null){
-          document.getElementById('message').innerText = "Please select an option from each group";
-          document.getElementById('message').style['color']= "red";
-       }
-       else{
-         var message = document.createElement("span");
-         message.innerText = "Please select an option from each group";
-         message.id = "message";
-         message.style['color']= "red";
-         document.getElementById('valForm').appendChild(message);
-       }
-   }
-   else{
-      if(document.getElementById('message')!== null){
-         document.getElementById('message').innerText = "Correct number of options selected!";
-         document.getElementById('message').style['color']= "green";
-      }
-      else{
-         var message = document.createElement("span");
-         message.innerText = "Correct number of options selected!";
-         message.id = "message";
-         message.style['color']= "green";
-         document.getElementById('valForm').appendChild(message);
-      }
-   }
-   var sum = 0;
+   
+      var sum = 0;
    var total = 0;
    if(!(firstSelected === "not selected")){
       sum += Number(firstSelected);
@@ -204,6 +179,33 @@ document.getElementById('valForm').addEventListener("submit", function(){
       avg = 0;
    }
 console.log('average = ' + avg);
+   if(firstSelected === "not selected" || secondSelected === "not selected" || thirdSelected === "not selected" || fourthSelected === "not selected" || fifthSelected === "not selected"){
+       if(document.getElementById('message')!== null){
+          document.getElementById('message').innerText = "Please select an option from each group. Avg: " + avg;
+          document.getElementById('message').style['color']= "red";
+       }
+       else{
+         var message = document.createElement("span");
+         message.innerText = "Please select an option from each group. Avg: " + avg;
+         message.id = "message";
+         message.style['color']= "red";
+         document.getElementById('valForm').appendChild(message);
+       }
+   }
+   else{
+      if(document.getElementById('message')!== null){
+         document.getElementById('message').innerText = "Correct number of options selected! Avg: " + avg;
+         document.getElementById('message').style['color']= "green";
+      }
+      else{
+         var message = document.createElement("span");
+         message.innerText = "Correct number of options selected! Avg: " + avg;
+         message.id = "message";
+         message.style['color']= "green";
+         document.getElementById('valForm').appendChild(message);
+      }
+   }
+
    
 });
 
