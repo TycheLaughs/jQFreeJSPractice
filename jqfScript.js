@@ -177,6 +177,30 @@ document.getElementById('valForm').addEventListener("submit", function(){
          document.getElementById('valForm').appendChild(message);
       }
    }
+   var sum = 0;
+   var total = 0;
+   if(!(firstSelected === "not selected")){
+      sum += Number(firstSelected);
+      total++;
+   }
+   if(!(secondSelected ==="not selected")){
+      sum += Number(secondSelected);
+      total++;
+   }
+   if(!(fourthSelected ==="not selected")){
+      sum += Number(fourthSelected);
+      total++;
+   }
+   if(!(thirdSelected==="not selected")){
+      sum += Number(thirdSelected);
+      total++;
+   }
+   if(!(fifthSelected ==="not selected")){
+      sum += Number(fifthSelected);
+      total++;
+   }
+   var avg = sum/total;
+console.log('average = ' + avg);
    
 });
 
