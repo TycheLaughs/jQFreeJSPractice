@@ -200,6 +200,9 @@ document.getElementById('valForm').addEventListener("submit", function(){
       total++;
    }
    var avg = sum/total;
+   if(total === 0){
+      avg = 0;
+   }
 console.log('average = ' + avg);
    
 });
