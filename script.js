@@ -69,10 +69,10 @@ var someData = [
 var insertion="<ul>";
 
 $.each(someData, function(index, entry){
-   insertion += "<li>" +entry.author + " writes about "+ entry.topic +"</li>";
-   console.log("added some data");
+   insertion += '<li style="list-style-type:none;color"black";transition:none">' + entry.author + ' writes about '+ entry.topic +'</li>';
+  // console.log("added some data");
 });
-insertion += "<li>-jQ</li></ul>";
+insertion += '<listyle="list-style-type:none">-jQ</li></ul>';
 $("#authorsJQ").html(insertion);
 
 

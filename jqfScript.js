@@ -98,3 +98,44 @@ context.arc(90,190, 70, (((3*Math.PI)/2)+.5),(((3*Math.PI)/2)));
 context.stroke();
 
 canv.title="The 'power button' symbol was initially meant to represent a 'standby' state, wherein the states of on and might have been ambiguous.  This resulted in the 1-superimposed-on-0 symbol, to represent power-high-or-low.  This symbol came to be used on power buttons in many consumer devices and its original meaning has been mostly forgotten.  -jQFree";
+
+
+var someData = [
+   {author: "Poe", topic:"human nature"},
+   {author: "Hemmingway", topic: "inadequacy"},
+   {author: "Gaiman", topic: "bending reality"},
+   {author: "Butcher", topic:"geekery"}
+];
+
+var isRainbowed = false;
+var list = document.getElementById('authorsJQ');
+list.style['cursor']="pointer";
+list.addEventListener("click", function rainbowfy(){
+   var contents = "<ul>";
+   if(isRainbowed == false){
+      
+      var colors = ["red", "orange", "yellow", "green", "blue", "\"purple\""];
+      var i = 0;
+      someData.forEach(function(entry, index, someData){
+      contents += '<li style="list-style-type:none; color:'+ colors[index]+'; transition: all '+ (4*i)+'s">' +entry.author + ' writes about '+ entry.topic +'</li>';
+      ++i;
+      });
+      isRainbowed = true;
+      contents += '<li style="list-style-type:none; color:'+'blue'+';transition: all '+ (4*i)+'s">-jQFree</li></ul>';
+   }
+   else{
+       someData.forEach(function(entry, index,someData){
+      contents += '<li style="list-style-type:none; color:"black">' +entry.author + ' writes about '+ entry.topic +'</li>';
+      ++i;
+       });
+       isRainbowed = false;
+       contents += '<li style="list-style-type:none; color:"black">-jQFree</li></ul>';
+   }
+   
+   list.innerHTML = contents;
+});
+
+
+      
+
+
