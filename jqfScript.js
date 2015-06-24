@@ -135,7 +135,58 @@ list.addEventListener("click", function rainbowfy(){
    list.innerHTML = contents;
 });
 
+/*some quick, makeshift front-end validation to check whether radio button 
+groups have an item selected*/
+document.getElementById('valForm').addEventListener("submit", function(){
+   console.log('submitted for validation');
+   var option1 = document.getElementsByName('val01');
+   var option2 = document.getElementsByName('val02');
+   var option3 = document.getElementsByName('val03');
+   var option4 = document.getElementsByName('val04');
+   var option5 = document.getElementsByName('val05');
+   var firstSelected = checkForChecked(option1);
+   var secondSelected =  checkForChecked(option2);
+   var thirdSelected =  checkForChecked(option3);
+   var fourthSelected =  checkForChecked(option4);
+   var fifthSelected =  checkForChecked(option5);
+   
+   console.log(firstSelected + ', ' + secondSelected +', ' + thirdSelected +', ' + fourthSelected +', ' + fifthSelected);
+   if(firstSelected === "not selected" || secondSelected === "not selected" || thirdSelected === "not selected" || fourthSelected === "not selected" || fifthSelected === "not selected"){
+       if(document.getElementById('message')!== null){
+          document.getElementById('message').innerText = "Please select an option from each group";
+       }
+       else{
+         var message = document.createElement("p");
+         message.innerText = "Please select an option from each group";
+         message.id = "message";
+         document.getElementById('valForm').appendChild(message);
+       }
+   }
+   else{
+      if(document.getElementById('message')!== null){
+         document.getElementById('message').innerText = "Correct number of options selected!";
+      }
+      else{
+         var message = document.createElement("p");
+         message.innerText = "Please select an option from each group";
+         message.id = "message";
+         document.getElementById('valForm').appendChild(message);
+      }
+   }
+   
+});
 
-      
+
+function checkForChecked(arr){
+   var foundChecked = false;
+   for(var i = 0; i < arr.length ; i++){
+      if(arr[i].checked == true){
+         return arr[i].value;
+      }
+   }
+   if (foundChecked == false){
+      return "not selected";
+   }
+}
 
 

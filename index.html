@@ -18,6 +18,9 @@
             color: green;
             font-size:1.5em;
          }
+         li{
+            list-style-type:none;
+         }
       </style>
    </head>
    <body>
@@ -67,7 +70,42 @@
       <div id="authorsNoJQ">
       
       </div>
+      <form id="valForm" action="javascript:void(0)">
       
+         <ul>
+         (Validation message appears below the button --jQFree)
+            <li>Option 1</li>
+            <input type="radio" name="val01" id="val01" value="1"/>1
+            <input type="radio" name="val01" id="val01" value="2"/>2
+            <input type="radio" name="val01" id="val01" value="3"/>3
+           <input type="radio" name="val01" id="val01" value="4"/>4
+            <br>
+            <li>Option 2</li>
+            <input type="radio" name="val02" id="val02" value="1"/>1
+            <input type="radio" name="val02" id="val02" value="2"/>2
+            <input type="radio" name="val02" id="val02" value="3"/>3
+            <input type="radio" name="val02" id="val02" value="4"/>4
+            <br>
+            <li>Option 3</li>
+            <input type="radio" name="val03" id="val03" value="1"/>1
+            <input type="radio" name="val03" id="val03" value="2"/>2
+            <input type="radio" name="val03" id="val03" value="3"/>3
+            <input type="radio" name="val03" id="val03" value="4"/>4
+            <br>
+            <li>Option 4</li>
+            <input type="radio" name="val04" id="val04" value="1"/>1
+            <input type="radio" name="val04" id="val04" value="2"/>2
+            <input type="radio" name="val04" id="val04" value="3"/>3
+            <input type="radio" name="val04" id="val04" value="4"/>4
+            <br>
+            <li>Option 5</li>
+            <input type="radio" name="val05" id="val05" value="1"/>1
+            <input type="radio" name="val05" id="val05" value="2"/>2
+            <input type="radio" name="val05" id="val05" value="3"/>3
+            <input type="radio" name="val05" id="val05" value="4"/>4
+         </ul>
+         <input type="submit" id="valBtn" name="valBtn" value="Double-check"/>
+      </form>
       <script src="script.js"></script>
       <script src="jqfScript.js"></script>
    </body>
